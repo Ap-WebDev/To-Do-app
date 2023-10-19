@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid green;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  place-items: center;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  place-content: center;
+  background: rgb(37, 65, 106);
+  background: -moz-linear-gradient(
+    263deg,
+    rgba(37, 65, 106, 0.8716736694677871) 30%,
+    rgba(73, 30, 216, 0.9669117647058824) 100%
+  );
+  background: -webkit-linear-gradient(
+    263deg,
+    rgba(37, 65, 106, 0.8716736694677871) 30%,
+    rgba(73, 30, 216, 0.9669117647058824) 100%
+  );
+  background: linear-gradient(
+    263deg,
+    rgba(37, 65, 106, 0.8716736694677871) 30%,
+    rgba(73, 30, 216, 0.9669117647058824) 100%
+  );
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  z-index: 1;
+  height: 90vh;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+h1 {
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.input {
+  margin: 0px 5px;
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input [type="text"] {
+  line-height: 28px;
+  border: 2px solid transparent;
+  border-bottom-color: #777;
+  padding: 0.2rem 0;
+  outline: none;
+  background-color: transparent;
+  color: #0d0c22;
+  transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.input:focus,
+input:hover {
+  outline: none;
+  padding: 0.2rem 0.75rem;
+  border-radius: 1rem;
+  border-color: #7a9cc6;
+}
+
+.input::placeholder {
+  color: #777;
+}
+
+.input:focus::placeholder {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.input-btn {
+  height: 40px;
+  width: 140px;
+  padding: 0px 10px;
+  border-radius: 25px;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: all 0.5s ease;
+}
+
+.input-btn:hover {
+  letter-spacing: 0px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+.input-btn:active {
+  letter-spacing: 0px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(4px);
+  transition: 100ms;
+}
+
+.task-list::-webkit-scrollbar {
+  display: none;
+}
+
+.task-list {
+  width: 70vw;
+  margin: 5px 0px;
+  height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+ul {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0;
+  width: 70vwpx;
+  margin: 0px 5px;
+  list-style-type: none;
+}
+
+li {
+  color: #0d0c22;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.check-del{
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li input{
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+
+}
+
+li button {
+    border-radius: 20px;
+  background-color: #ff6464;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 90vw;
+    height: 90vh;
+  }
+  .input,
+  .task-list {
+    width: 80vw;
+  }
+  ul {
+    width: 78vw;
+    margin: 0px 1vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90vw;
+    height: 90vh;
+  }
+  .input,
+  .task-list {
+    width: 80vw;
+  }
+  ul {
+    width: 78vw;
+    margin: 0px 1vw;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .container {
+    width: 350px;
+    height: 90vh;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    width: 350px;
+    height: 90vh;
+  }
+  .input,
+  .task-list {
+    width: 90vw;
+  }
+  ul {
+    width: 275px;
+  }
+}
